@@ -16,6 +16,11 @@ class _MainScreenState extends State<MainScreen> {
     "https://images.pexels.com/photos/266541/pexels-photo-266541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   ];
 
+  //Items List Local Icons Test
+  List iconListURL = [
+    "https://img.icons8.com/ios/50/000000/year-of-ox.png",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +47,121 @@ class _MainScreenState extends State<MainScreen> {
             ),
           ),
         ),
+        Container(
+          margin: EdgeInsets.symmetric(
+            vertical: 4,
+          ),
+          padding: EdgeInsets.all(15.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                children: <Widget>[
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(45.0),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black38,
+                              blurRadius: 10.0,
+                              offset: Offset(0, 6))
+                        ]),
+                    child: CircleAvatar(
+                      radius: 35.0,
+                      backgroundColor: Colors.white,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        top: 10.0, bottom: 10.0, left: 5.0, right: 5.0),
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text("Carne de Boi"),
+                    ),
+                  )
+                ],
+              ),
+              Column(
+                children: <Widget>[
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(45.0),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black38,
+                              blurRadius: 10.0,
+                              offset: Offset(0, 6))
+                        ]),
+                    child: CircleAvatar(
+                      radius: 35.0,
+                      backgroundColor: Colors.white,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        top: 10.0, bottom: 10.0, left: 5.0, right: 5.0),
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text("Carne de Frango"),
+                    ),
+                  )
+                ],
+              ),
+              Column(
+                children: <Widget>[
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(45.0),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black38,
+                              blurRadius: 10.0,
+                              offset: Offset(0, 6))
+                        ]),
+                    child: CircleAvatar(
+                      radius: 35.0,
+                      backgroundColor: Colors.white,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        top: 10.0, bottom: 10.0, left: 5.0, right: 5.0),
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text("Carne de Porco"),
+                    ),
+                  )
+                ],
+              ),
+              Column(
+                children: <Widget>[
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(45.0),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black38,
+                              blurRadius: 10.0,
+                              offset: Offset(0, 6))
+                        ]),
+                    child: CircleAvatar(
+                      radius: 35.0,
+                      backgroundColor: Colors.white,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        top: 10.0, bottom: 10.0, left: 5.0, right: 5.0),
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text("Geleia"),
+                    ),
+                  )
+                ],
+              ),
+            ],
+          ),
+        )
       ],
     ));
   }
