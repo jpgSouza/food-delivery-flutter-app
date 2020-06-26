@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 217, 69, 65),
+      backgroundColor: Hexcolor('#D9455F'),
       body: SafeArea(
         child: Form(
           child: ListView(
@@ -61,8 +62,7 @@ class LoginScreen extends StatelessWidget {
                                         border: InputBorder.none,
                                         prefixIcon: Icon(
                                           Icons.email,
-                                          color:
-                                              Color.fromARGB(255, 217, 69, 65),
+                                          color: Hexcolor('#D9455F'),
                                         ),
                                         hintText: "E-mail",
                                         hintStyle:
@@ -82,7 +82,7 @@ class LoginScreen extends StatelessWidget {
                                       border: InputBorder.none,
                                       prefixIcon: Icon(
                                         Icons.vpn_key,
-                                        color: Color.fromARGB(255, 217, 69, 65),
+                                        color: Hexcolor('#D9455F'),
                                       ),
                                       hintText: "Senha",
                                       hintStyle:
@@ -91,8 +91,7 @@ class LoginScreen extends StatelessWidget {
                                         onPressed: () {},
                                         icon: Icon(
                                           Icons.visibility_off,
-                                          color:
-                                              Color.fromARGB(255, 217, 69, 65),
+                                          color: Hexcolor('#D9455F'),
                                         ),
                                       ),
                                     ),
@@ -132,7 +131,7 @@ class LoginScreen extends StatelessWidget {
                                     "ENTRAR",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: Color.fromARGB(255, 217, 69, 65),
+                                      color: Hexcolor('#D9455F'),
                                       fontSize: 15.0,
                                     ),
                                   ),
@@ -145,19 +144,25 @@ class LoginScreen extends StatelessWidget {
                             constraints: BoxConstraints(
                                 maxWidth: 350.0, minHeight: 60.0),
                             child: new OutlineButton(
-                              padding: EdgeInsets.only(left: 40.0, right: 40.0),
+                                padding:
+                                    EdgeInsets.only(left: 40.0, right: 40.0),
                                 color: Color.fromARGB(255, 217, 69, 65),
                                 child: Tab(
                                   icon: Container(
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: <Widget>[
                                         Image(
-                                          image: AssetImage('lib/view/images/icons/facebook-icon.png'),
+                                          image: AssetImage(
+                                              'lib/view/images/icons/facebook-icon.png'),
                                           color: Colors.white,
                                           height: 30.0,
                                         ),
-                                        Text("ENTRAR COM FACEBOOK", style: TextStyle(color: Colors.white),)
+                                        Text(
+                                          "ENTRAR COM FACEBOOK",
+                                          style: TextStyle(color: Colors.white),
+                                        )
                                       ],
                                     ),
                                   ),
@@ -170,13 +175,15 @@ class LoginScreen extends StatelessWidget {
                           Align(
                             alignment: Alignment.center,
                             child: FlatButton(
-                              padding: EdgeInsets.zero,
-                              child: FlatButton(
-                                onPressed: (){},
                                 padding: EdgeInsets.zero,
-                                child: Text("Não possui conta? Cadastr-se", style: TextStyle(color: Colors.white),),
-                              )
-                            ),
+                                child: FlatButton(
+                                  onPressed: () {},
+                                  padding: EdgeInsets.zero,
+                                  child: Text(
+                                    "Não possui conta? Cadastr-se",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                )),
                           )
                         ],
                       ),

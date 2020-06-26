@@ -1,5 +1,7 @@
-import 'package:delivery_app/view/login_screen.dart';
+import 'package:delivery_app/view/Screens/home_screen.dart';
+import 'package:delivery_app/view/Screens/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,9 +12,9 @@ class MyApp extends StatelessWidget {
       title: "Food Delivery",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color.fromARGB(255, 217, 69, 65),
+        primaryColor: Hexcolor('#D9455F')
       ),
-      home: LoginScreen(),
+      home: HomeScreen(),
     );
   }
 }
