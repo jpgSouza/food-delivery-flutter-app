@@ -1,3 +1,4 @@
+import 'package:delivery_app/view/Screens/main_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
@@ -46,9 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               color: Colors.green,
             ),
-            Container(
-              color: Colors.blue,
-            ),
+            MainScreen(),
             Container(
               color: Colors.yellow,
             ),
