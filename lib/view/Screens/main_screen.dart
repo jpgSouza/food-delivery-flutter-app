@@ -1,4 +1,5 @@
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:delivery_app/view/Tiles/food_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -67,16 +68,16 @@ class _MainScreenState extends State<MainScreen> {
                               offset: Offset(0, 6))
                         ]),
                     child: CircleAvatar(
-                      radius: 35.0,
+                      radius: 30.0,
                       backgroundColor: Colors.white,
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(
-                        top: 10.0, bottom: 10.0, left: 5.0, right: 5.0),
+                        top: 10.0, bottom: 10.0),
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Carne de Boi"),
+                      child: Text("Carne de Boi",style: TextStyle(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold),),
                     ),
                   )
                 ],
@@ -93,16 +94,16 @@ class _MainScreenState extends State<MainScreen> {
                               offset: Offset(0, 6))
                         ]),
                     child: CircleAvatar(
-                      radius: 35.0,
+                      radius: 30.0,
                       backgroundColor: Colors.white,
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(
-                        top: 10.0, bottom: 10.0, left: 5.0, right: 5.0),
+                        top: 10.0, bottom: 10.0),
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Carne de Frango"),
+                      child: Text("Carne de Frango", style: TextStyle(color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold),),
                     ),
                   )
                 ],
@@ -119,16 +120,16 @@ class _MainScreenState extends State<MainScreen> {
                               offset: Offset(0, 6))
                         ]),
                     child: CircleAvatar(
-                      radius: 35.0,
+                      radius: 30.0,
                       backgroundColor: Colors.white,
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(
-                        top: 10.0, bottom: 10.0, left: 5.0, right: 5.0),
+                        top: 10.0, bottom: 10.0),
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Carne de Porco"),
+                      child: Text("Carne de Porco",style: TextStyle(color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold),),
                     ),
                   )
                 ],
@@ -145,23 +146,24 @@ class _MainScreenState extends State<MainScreen> {
                               offset: Offset(0, 6))
                         ]),
                     child: CircleAvatar(
-                      radius: 35.0,
+                      radius: 30.0,
                       backgroundColor: Colors.white,
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(
-                        top: 10.0, bottom: 10.0, left: 5.0, right: 5.0),
+                        top: 10.0, bottom: 10.0,),
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Geleia"),
+                      child: Text("Geleia",style: TextStyle(color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold),),
                     ),
                   )
                 ],
               ),
             ],
           ),
-        )
+        ),
+        FoodTile(),
       ],
     ));
   }

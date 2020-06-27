@@ -12,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   PageController _pageController = PageController();
   GlobalKey _bottomNavigationKey = GlobalKey();
   int _currentPage = 2;
-
+  static const Color transparent = Color(0x00000000);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: CurvedNavigationBar(
         key: _bottomNavigationKey,
         index: _currentPage,
-        backgroundColor: Colors.white,
+        backgroundColor: transparent,
         color: Theme.of(context).primaryColor,
         height: 65.0,
         items: <Widget>[
