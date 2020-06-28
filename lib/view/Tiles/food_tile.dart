@@ -12,8 +12,11 @@ class FoodTile extends StatelessWidget {
     ];
 
     return Container(
+        height: 300.0,
         margin: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
+        child: ListView(
+          shrinkWrap: true,
+          physics: AlwaysScrollableScrollPhysics(),
           children: <Widget>[
             Card(
                 shape: RoundedRectangleBorder(
@@ -147,9 +150,7 @@ class FoodTile extends StatelessWidget {
                     ],
                   ),
                 )),
-            SizedBox(
-              height: 10.0,
-            ),
+            SizedBox(height: 10.0,),
             Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0)),
@@ -264,6 +265,138 @@ class FoodTile extends StatelessWidget {
                                               topRight: Radius.circular(8.0),
                                               bottomRight:
                                                   Radius.circular(8.0))),
+                                      child: FlatButton(
+                                        onPressed: () {},
+                                        child: Text(
+                                          "ADD",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      )),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                )),
+            Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0)),
+                elevation: 6.0,
+                color: Colors.white,
+                child: Container(
+                  padding: EdgeInsets.all(12.0),
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        width: 150.0,
+                        height: 110.0,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: NetworkImage(imagesListURL[1]),
+                                fit: BoxFit.fill),
+                            borderRadius: BorderRadius.circular(12.0)),
+                      ),
+                      SizedBox(
+                        width: 20.0,
+                      ),
+                      Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Text(
+                                  "Costela de Boi",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  width: 46.0,
+                                ),
+                                Icon(
+                                  Icons.favorite_border,
+                                  color: Theme.of(context).primaryColor,
+                                  size: 28.0,
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 4.0,
+                            ),
+                            Text(
+                              "Descrição",
+                              style: TextStyle(color: Colors.grey[500]),
+                            ),
+                            SizedBox(
+                              height: 4.0,
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.star,
+                                  size: 20.0,
+                                  color: Colors.grey[500],
+                                ),
+                                Icon(Icons.star,
+                                    size: 20.0, color: Colors.grey[500]),
+                                Icon(Icons.star,
+                                    size: 20.0, color: Colors.grey[500]),
+                                Icon(Icons.star,
+                                    size: 20.0, color: Colors.grey[500]),
+                                Icon(Icons.star_half,
+                                    size: 20.0, color: Colors.grey[500]),
+                                SizedBox(
+                                  width: 8.0,
+                                ),
+                                Text("4.5")
+                              ],
+                            ),
+                            SizedBox(
+                              height: 4.0,
+                            ),
+                            Container(
+                              width: 170.0,
+                              height: 45.0,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.black38,
+                                        blurRadius: 10.0,
+                                        offset: Offset(0, 6))
+                                  ]),
+                              child: Row(
+                                children: <Widget>[
+                                  Container(
+                                    alignment: Alignment.center,
+                                    width: 85.0,
+                                    height: 45.0,
+                                    decoration: BoxDecoration(
+                                        color: Theme.of(context).primaryColor,
+                                        borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(8.0),
+                                            bottomLeft: Radius.circular(8.0))),
+                                    child: Text(
+                                      "R\$ 69.99",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  Container(
+                                      alignment: Alignment.center,
+                                      width: 85.0,
+                                      height: 45.0,
+                                      decoration: BoxDecoration(
+                                          color: Hexcolor("#DE7386"),
+                                          borderRadius: BorderRadius.only(
+                                              topRight: Radius.circular(8.0),
+                                              bottomRight:
+                                              Radius.circular(8.0))),
                                       child: FlatButton(
                                         onPressed: () {},
                                         child: Text(
