@@ -30,6 +30,18 @@ class FoodInfoScreen extends StatelessWidget {
                 ),
               ],
             ),
+            Positioned(
+              width: 250.0,
+              left: 30.0,
+              child: Container(
+                width: 320.0,
+                height: 250.0,
+                child: Image(
+                  image: AssetImage('lib/view/images/background/barbecue.png'),
+                  height: 280.0,
+                ),
+              ),
+            ),
             Column(
               children: <Widget>[
                 Container(
@@ -309,7 +321,7 @@ class FoodInfoScreen extends StatelessWidget {
                       padding: EdgeInsets.all(0.0),
                       child: Ink(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(14.0),
+                            borderRadius: BorderRadius.circular(14.0),
                             color: Theme.of(context).primaryColor),
                         child: Container(
                             constraints: BoxConstraints(
@@ -318,8 +330,14 @@ class FoodInfoScreen extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                Icon(Icons.shopping_cart,color: Colors.white, size: 30.0,),
-                                SizedBox(width: 30.0,),
+                                Icon(
+                                  Icons.shopping_cart,
+                                  color: Colors.white,
+                                  size: 30.0,
+                                ),
+                                SizedBox(
+                                  width: 30.0,
+                                ),
                                 Text(
                                   "Adicionar ao Carrinho",
                                   textAlign: TextAlign.center,
