@@ -283,6 +283,9 @@ class FoodTile extends StatelessWidget {
                     ],
                   ),
                 )),
+            SizedBox(
+              height: 10.0,
+            ),
             Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0)),

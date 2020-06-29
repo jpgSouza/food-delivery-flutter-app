@@ -9,6 +9,7 @@ class LoginScreen extends StatelessWidget {
       body: SafeArea(
         child: Form(
           child: ListView(
+            physics: AlwaysScrollableScrollPhysics(),
             padding: EdgeInsets.zero,
             children: <Widget>[
               Container(
@@ -16,7 +17,7 @@ class LoginScreen extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: 350.0,
+                      height: MediaQuery.of(context).size.height * 0.35,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(

@@ -1,3 +1,4 @@
+import 'package:delivery_app/view/Screens/cart_screen.dart';
 import 'package:delivery_app/view/Screens/main_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -51,9 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               color: Colors.yellow,
             ),
-            Container(
-              color: Colors.black,
-            )
+            CartScreen(),
           ],
         ),
       ),
