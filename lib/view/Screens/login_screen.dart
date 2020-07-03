@@ -132,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                                     "ENTRAR",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: Hexcolor('#D9455F'),
+                                      color: Theme.of(context).primaryColor,
                                       fontSize: 15.0,
                                     ),
                                   ),

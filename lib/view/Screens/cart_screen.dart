@@ -1,3 +1,4 @@
+import 'package:delivery_app/view/Widgets/custom_order_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -434,7 +435,9 @@ class CartScreen extends StatelessWidget {
                           borderSide: BorderSide(
                               color: Theme.of(context).primaryColor, width: 2),
                           shape: StadiumBorder(),
-                          onPressed: () {}),
+                          onPressed: () {
+                            showDialog(context: context, builder: (context)=> OrderDialog());
+                          }),
                     ),
                   ],
                 ),
