@@ -1,3 +1,4 @@
+import 'package:delivery_app/view/Screens/food_info_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -58,13 +59,6 @@ class FoodTile extends StatelessWidget {
                                   size: 28.0,
                                 )
                               ],
-                            ),
-                            SizedBox(
-                              height: 4.0,
-                            ),
-                            Text(
-                              "Descrição",
-                              style: TextStyle(color: Colors.grey[500]),
                             ),
                             SizedBox(
                               height: 4.0,
@@ -133,7 +127,12 @@ class FoodTile extends StatelessWidget {
                                               bottomRight:
                                                   Radius.circular(8.0))),
                                       child: FlatButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.of(context).push(
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      FoodInfoScreen()));
+                                        },
                                         child: Text(
                                           "ADD",
                                           style: TextStyle(
@@ -150,7 +149,9 @@ class FoodTile extends StatelessWidget {
                     ],
                   ),
                 )),
-            SizedBox(height: 10.0,),
+            SizedBox(
+              height: 10.0,
+            ),
             Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0)),
@@ -191,13 +192,6 @@ class FoodTile extends StatelessWidget {
                                   size: 28.0,
                                 )
                               ],
-                            ),
-                            SizedBox(
-                              height: 4.0,
-                            ),
-                            Text(
-                              "Descrição",
-                              style: TextStyle(color: Colors.grey[500]),
                             ),
                             SizedBox(
                               height: 4.0,
@@ -330,10 +324,6 @@ class FoodTile extends StatelessWidget {
                             SizedBox(
                               height: 4.0,
                             ),
-                            Text(
-                              "Descrição",
-                              style: TextStyle(color: Colors.grey[500]),
-                            ),
                             SizedBox(
                               height: 4.0,
                             ),
@@ -399,7 +389,7 @@ class FoodTile extends StatelessWidget {
                                           borderRadius: BorderRadius.only(
                                               topRight: Radius.circular(8.0),
                                               bottomRight:
-                                              Radius.circular(8.0))),
+                                                  Radius.circular(8.0))),
                                       child: FlatButton(
                                         onPressed: () {},
                                         child: Text(

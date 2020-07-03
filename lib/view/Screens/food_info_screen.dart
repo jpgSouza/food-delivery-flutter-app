@@ -1,4 +1,5 @@
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:delivery_app/view/Screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class FoodInfoScreen extends StatelessWidget {
@@ -40,6 +41,16 @@ class FoodInfoScreen extends StatelessWidget {
                   image: AssetImage('lib/view/images/background/barbecue.png'),
                   height: 280.0,
                 ),
+              ),
+            ),
+            Positioned(
+              top: 25.0,
+              left: 10.0,
+              child: IconButton(
+                icon: Icon(Icons.keyboard_arrow_left, color: Colors.white70,size: 50.0,),
+                onPressed: (){
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> HomeScreen()));
+                },
               ),
             ),
             Column(
