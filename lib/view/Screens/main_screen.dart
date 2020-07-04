@@ -28,7 +28,7 @@ class _MainScreenState extends State<MainScreen> {
         body: ListView(
       children: <Widget>[
         AspectRatio(
-          aspectRatio: 1.5,
+          aspectRatio: 1.7,
           child: Container(
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(boxShadow: [
@@ -46,6 +46,20 @@ class _MainScreenState extends State<MainScreen> {
               dotColor: Theme.of(context).primaryColor,
               autoplay: false,
             ),
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 15.0, bottom: 0.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text("Categorias", style: TextStyle(fontWeight: FontWeight.bold),),
+              Row(
+                children: <Widget>[
+                  Text("Ver todas >", style: TextStyle(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold),),
+                ],
+              )
+            ],
           ),
         ),
         Container(
