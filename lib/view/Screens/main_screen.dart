@@ -70,6 +70,10 @@ class _MainScreenState extends State<MainScreen> {
                     child: CircleAvatar(
                       radius: 30.0,
                       backgroundColor: Colors.white,
+                      child: Image(
+                        image: AssetImage("lib/view/images/icons/boi-icon.png"),
+                        color: Theme.of(context).primaryColor,
+                      ),
                     ),
                   ),
                   Padding(
@@ -96,6 +100,12 @@ class _MainScreenState extends State<MainScreen> {
                     child: CircleAvatar(
                       radius: 30.0,
                       backgroundColor: Colors.white,
+                      child: Image(
+                        image: AssetImage("lib/view/images/icons/galinha-icon.png"),
+                        color: Theme.of(context).primaryColor,
+                        width: 50.0,
+                        height: 50.0,
+                      ),
                     ),
                   ),
                   Padding(
@@ -122,6 +132,12 @@ class _MainScreenState extends State<MainScreen> {
                     child: CircleAvatar(
                       radius: 30.0,
                       backgroundColor: Colors.white,
+                      child: Image(
+                        image: AssetImage("lib/view/images/icons/porco-icon.png"),
+                        color: Theme.of(context).primaryColor,
+                        width: 45.0,
+                        height: 45.0,
+                      ),
                     ),
                   ),
                   Padding(
@@ -148,6 +164,12 @@ class _MainScreenState extends State<MainScreen> {
                     child: CircleAvatar(
                       radius: 30.0,
                       backgroundColor: Colors.white,
+                      child: Image(
+                        image: AssetImage("lib/view/images/icons/geleia-icon.png"),
+                        color: Theme.of(context).primaryColor,
+                        width: 45.0,
+                        height: 45.0,
+                      ),
                     ),
                   ),
                   Padding(
