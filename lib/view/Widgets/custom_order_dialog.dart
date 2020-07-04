@@ -48,37 +48,6 @@ class OrderDialog extends StatelessWidget {
               "GNz6WztqfoZmoO6j6r3HugBoy5H3",
               style: TextStyle(color: Colors.white),
             ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 12.0, right: 12.0),
-              child: RaisedButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => OrdersScreen()));
-                },
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40.0)),
-                padding: EdgeInsets.all(0.0),
-                child: Ink(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(40.0)),
-                    child: Container(
-                      constraints:
-                          BoxConstraints(maxWidth: 350.0, minHeight: 55.0),
-                      alignment: Alignment.center,
-                      child: Text(
-                        "PEDIDOS",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Theme.of(context).primaryColor,
-                          fontSize: 15.0,
-                        ),
-                      ),
-                    )),
-              ),
-            )
           ],
         ),
       ),
