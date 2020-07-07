@@ -34,3 +34,8 @@ O aplicativo contém algumas funcionalidades essenciais, como:
 #### Curved Navigation Bar
 
 - Bottom navigation bar personalizada (https://pub.dev/packages/curved_navigation_bar)  
+
+## Telas
+- Protótipos feitos no Adobe XD
+
+<img src="https://github.com/jpgSouza/food-delivery-flutter-app/blob/master/prototype_screens/Login%20Screen.png" height="420" width="200"> <img src="https://github.com/jpgSouza/food-delivery-flutter-app/blob/master/prototype_screens/Home%20Screen.png" height="420" width="200"> <img src="https://github.com/jpgSouza/food-delivery-flutter-app/blob/master/prototype_screens/Food%20Info%20Screen.png" height="420" width="200"> <img src="https://github.com/jpgSouza/food-delivery-flutter-app/blob/master/prototype_screens/Cart%20Screen.png" height="420" width="200"> <img src="https://github.com/jpgSouza/food-delivery-flutter-app/blob/master/prototype_screens/Order%20Screeen.png" height="420" width="200"> 
