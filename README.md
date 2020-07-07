@@ -1,16 +1,36 @@
-# delivery_app
+# Food Delivery App
+Aplicação desenvolvida com intuito de aplicar/desenvolver os conceitos aprendidos em Flutter 
 
-A new Flutter application.
+## Descrição
+O aplicativo tem como finalidade replicar as principais funcionalidades de um delivery app. Focado no campo de churrasco, o aplicativo conta com uma interface intuitiva e de fácil utilização 
 
-## Getting Started
+## Funcionalidades
+O aplicativo contém algumas funcionalidades essenciais, como: 
+- Cadastro do usuário;
+- Login com Facebook;
+- Adicionar produtos no carrinho;
+- Aplicar cupom de desconto;
+- Visualizar status do pedido;
+- Favoritar pedidos;
+- Visualizar informações do usuário.
 
-This project is a starting point for a Flutter application.
+## Bibliotecas utilizadas
+#### Firebase Authentication
 
-A few resources to get you started if this is your first Flutter project:
+- Autenticação do usuário com a autenticação do usuário (https://pub.dev/packages/firebase_auth)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+#### Cloud Firestore
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Manipulação dos dados no firestore (https://pub.dev/packages/cloud_firestore)
+
+#### Carousel Pro
+
+- Transição de imagens com carousel (https://pub.dev/packages/carousel_pro)
+
+#### Hex Color
+
+- Utilização de cores no formato hexadecimal (https://pub.dev/packages/hexcolor)
+
+#### Curved Navigation Bar
+
+- Bottom navigation bar personalizada (https://pub.dev/packages/curved_navigation_bar)  
