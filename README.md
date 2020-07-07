@@ -2,7 +2,7 @@
 Aplicação desenvolvida com intuito de aplicar/desenvolver os conceitos aprendidos em Flutter 
 
 ## Descrição
-O aplicativo tem como finalidade replicar as principais funcionalidades de um delivery app. Focado no campo de churrasco, o aplicativo conta com uma interface intuitiva e de fácil utilização 
+Buscando preencher a escassez de aplicativos que listem fornecedores de comida pronta de qualidade, a aplicação tem como finalidade replicar as principais funcionalidades de um delivery app focado no campo de churrasco e carnes especiais. Por meio de uma interface intuitiva, simples e que vai lhe deixar com água na boca, encontre os melhores produtos para sua próxima refeição!
 
 ## Funcionalidades
 O aplicativo contém algumas funcionalidades essenciais, como: 
