@@ -5,197 +5,267 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Hexcolor('#D9455F'),
-      body: SafeArea(
-        child: Form(
-          child: ListView(
-            physics: AlwaysScrollableScrollPhysics(),
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              Container(
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.35,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(40.0),
-                              bottomRight: Radius.circular(40.0)),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black38,
-                                blurRadius: 10.0,
-                                offset: Offset(0, 6))
-                          ]),
+        backgroundColor: Theme.of(context).primaryColor,
+        body: Form(
+          child: SafeArea(
+              child: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            child: Stack(
+              children: <Widget>[
+                Positioned(
+                  top: 125.0,
+                  left: 150.0,
+                  child: Container(
+                    height: 200.0,
+                    child: Image(
+                      image: AssetImage("lib/view/images/background/login.png"),
+                      fit: BoxFit.fill,
                     ),
-                    SizedBox(
-                      height: 80.0,
+                  ),
+                ),
+                Positioned(
+                  child: Container(
+                    height: 300.0,
+                    width: MediaQuery.of(context).size.width,
+                    child: Image(
+                      image: AssetImage(
+                          "lib/view/images/background/custom-shape-2.png"),
+                      fit: BoxFit.fill,
                     ),
-                    Padding(
-                      padding: EdgeInsets.all(30.0),
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.all(5.0),
+                  ),
+                ),
+                Positioned(
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    child: Image(
+                      image: AssetImage(
+                          "lib/view/images/background/custom-shape-1.png"),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 320.0,
+                  left: 25.0,
+                  right: 25.0,
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 369.0,
+                    height: 228.0,
+                    padding: EdgeInsets.all(12.0),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10.0),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black38,
+                            blurRadius: 10.0,
+                            offset: Offset(0, 6))
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                            padding: EdgeInsets.all(8.0),
                             decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(15.0),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.black38,
-                                      blurRadius: 10.0,
-                                      offset: Offset(0, 6)),
-                                ]),
+                                border: Border(
+                                    bottom:
+                                        BorderSide(color: Colors.grey[100]))),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Container(
-                                  padding: EdgeInsets.all(8.0),
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                          bottom: BorderSide(
-                                              color: Colors.grey[200]))),
-                                  child: TextFormField(
-                                    style: TextStyle(color: Colors.black),
-                                    keyboardType: TextInputType.emailAddress,
-                                    decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        prefixIcon: Icon(
-                                          Icons.email,
-                                          color: Hexcolor('#D9455F'),
-                                        ),
-                                        hintText: "E-mail",
-                                        hintStyle:
-                                            TextStyle(color: Colors.grey[400])),
-                                  ),
+                                Text(
+                                  "Login",
+                                  style: TextStyle(
+                                      color: Theme.of(context).primaryColor,
+                                      fontSize: 22.0),
                                 ),
-                                Container(
-                                  padding: EdgeInsets.all(8.0),
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                          bottom: BorderSide(
-                                              color: Colors.grey[100]))),
-                                  child: TextFormField(
-                                    style: TextStyle(color: Colors.black),
-                                    obscureText: true,
-                                    decoration: InputDecoration(
+                                TextFormField(
+                                  style: TextStyle(color: Colors.black),
+                                  keyboardType: TextInputType.emailAddress,
+                                  decoration: InputDecoration(
                                       border: InputBorder.none,
-                                      prefixIcon: Icon(
-                                        Icons.vpn_key,
-                                        color: Hexcolor('#D9455F'),
-                                      ),
-                                      hintText: "Senha",
+                                      prefixIcon: Icon(Icons.email,
+                                          color:
+                                              Theme.of(context).primaryColor),
+                                      hintText: "E-mail",
                                       hintStyle:
-                                          TextStyle(color: Colors.grey[400]),
-                                      suffixIcon: IconButton(
-                                        onPressed: () {},
-                                        icon: Icon(
-                                          Icons.visibility_off,
-                                          color: Hexcolor('#D9455F'),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                          TextStyle(color: Colors.grey[400])),
                                 ),
                               ],
-                            ),
-                          ),
-                          Align(
-                            alignment: Alignment.centerRight,
-                            child: FlatButton(
-                              onPressed: () {},
-                              padding: EdgeInsets.zero,
-                              child: Text(
-                                "Esqueceu sua senha?",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 30.0,
-                          ),
-                          RaisedButton(
-                            onPressed: () {},
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40.0)),
-                            padding: EdgeInsets.all(0.0),
-                            child: Ink(
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(40.0)),
-                                child: Container(
-                                  constraints: BoxConstraints(
-                                      maxWidth: 350.0, minHeight: 60.0),
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "ENTRAR",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Theme.of(context).primaryColor,
-                                      fontSize: 15.0,
-                                    ),
-                                  ),
-                                )),
-                          ),
-                          SizedBox(
-                            height: 20.0,
-                          ),
-                          Container(
-                            constraints: BoxConstraints(
-                                maxWidth: 350.0, minHeight: 60.0),
-                            child: new OutlineButton(
-                                padding:
-                                    EdgeInsets.only(left: 40.0, right: 40.0),
-                                color: Color.fromARGB(255, 217, 69, 65),
-                                child: Tab(
-                                  icon: Container(
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        Image(
-                                          image: AssetImage(
-                                              'lib/view/images/icons/facebook-icon.png'),
-                                          color: Colors.white,
-                                          height: 30.0,
-                                        ),
-                                        Text(
-                                          "ENTRAR COM FACEBOOK",
-                                          style: TextStyle(color: Colors.white),
-                                        )
-                                      ],
-                                    ),
+                            )),
+                        Container(
+                            padding: EdgeInsets.all(8.0),
+                            decoration: BoxDecoration(
+                                border: Border(
+                                    bottom:
+                                        BorderSide(color: Colors.grey[100]))),
+                            child: TextFormField(
+                              obscureText: true,
+                              style: TextStyle(color: Colors.black),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                prefixIcon: Icon(Icons.vpn_key,
+                                    color: Theme.of(context).primaryColor),
+                                hintText: "Password",
+                                hintStyle: TextStyle(color: Colors.grey[400]),
+                                suffixIcon: IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.visibility_off,
+                                    color: Theme.of(context).primaryColor,
                                   ),
                                 ),
-                                borderSide:
-                                    BorderSide(color: Colors.white, width: 2),
-                                shape: StadiumBorder(),
-                                onPressed: () {}),
+                              ),
+                            )),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: FlatButton(
+                            padding: EdgeInsets.zero,
+                            onPressed: () {},
+                            child: Text(
+                              "Esqueceu sua senha?",
+                              textAlign: TextAlign.right,
+                              style: TextStyle(
+                                  color: Theme.of(context).primaryColor),
+                            ),
                           ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: FlatButton(
-                                padding: EdgeInsets.zero,
-                                child: FlatButton(
-                                  onPressed: () {},
-                                  padding: EdgeInsets.zero,
-                                  child: Text(
-                                    "Não possui conta? Cadastr-se",
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                )),
-                          )
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Positioned(
+                    top: 570.0,
+                    left: 45.0,
+                    right: 45.0,
+                    child: Container(
+                      height: 60.0,
+                      alignment: Alignment.center,
+                      child: RaisedButton(
+                        onPressed: () {},
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40.0)),
+                        padding: EdgeInsets.all(0.0),
+                        child: Ink(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(40.0)),
+                            child: Container(
+                              constraints: BoxConstraints(
+                                  maxWidth: 350.0, minHeight: 60.0),
+                              alignment: Alignment.center,
+                              child: Text(
+                                "ENTRAR",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Theme.of(context).primaryColor,
+                                  fontSize: 15.0,
+                                ),
+                              ),
+                            )),
+                      ),
+                    )),
+                Positioned(
+                    top: 645.0,
+                    left: 35.0,
+                    right: 35.0,
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Container(
+                            color: Colors.white60,
+                            width: 145,
+                            height: 1,
+                          ),
+                          Text(
+                            "OU",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Container(
+                            color: Colors.white60,
+                            width: 145,
+                            height: 1,
+                          ),
                         ],
                       ),
-                    )
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+                    )),
+                Positioned(
+                    top: 670.0,
+                    left: 45.0,
+                    right: 45.0,
+                    child: Container(
+                      height: 60.0,
+                      alignment: Alignment.center,
+                      child: Container(
+                        constraints:
+                            BoxConstraints(maxWidth: 350.0, minHeight: 60.0),
+                        child:OutlineButton(
+                            padding: EdgeInsets.only(left: 40.0, right: 40.0),
+                            color: Color.fromARGB(255, 217, 69, 65),
+                            child: Tab(
+                              icon: Container(
+                                child: Row(
+                                  children: <Widget>[
+                                    Image(
+                                      image: AssetImage(
+                                          'lib/view/images/icons/facebook-icon.png'),
+                                      color: Colors.white,
+                                      height: 30.0,
+                                    ),
+                                    SizedBox(
+                                      width: 20.0,
+                                    ),
+                                    Text(
+                                      "ENTRAR COM FACEBOOK",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(color: Colors.white,),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                            borderSide:
+                                BorderSide(color: Colors.white, width: 2),
+                            shape: StadiumBorder(),
+                            onPressed: () {}),
+                      ),
+                    )),
+                Positioned(
+                  top: 725.0,
+                  left: 45.0,
+                  right: 45.0,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: FlatButton(
+                        padding: EdgeInsets.zero,
+                        child: FlatButton(
+                          onPressed: () {},
+                          padding: EdgeInsets.zero,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                "Não possui conta?",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              SizedBox(width: 6.0,),
+                              Text(
+                                "Cadastre-se",
+                                style: TextStyle(color: Colors.black),
+                              ),
+                            ],
+                          )
+                        )),
+                  ),
+                )
+              ],
+            ),
+          )),
+        ));
   }
 }
