@@ -17,7 +17,7 @@ O aplicativo contém algumas funcionalidades essenciais, como:
 ## Bibliotecas utilizadas
 #### Firebase Authentication
 
-- Autenticação do usuário com a autenticação do usuário (https://pub.dev/packages/firebase_auth)
+- Autenticação do usuário com a firebase (https://pub.dev/packages/firebase_auth)
 
 #### Cloud Firestore
 
