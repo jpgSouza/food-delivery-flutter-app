@@ -1,3 +1,4 @@
+import 'package:delivery_app/view/Screens/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -244,7 +245,9 @@ class LoginScreen extends StatelessWidget {
                     child: FlatButton(
                         padding: EdgeInsets.zero,
                         child: FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => RegisterScreen(),));
+                          },
                           padding: EdgeInsets.zero,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
