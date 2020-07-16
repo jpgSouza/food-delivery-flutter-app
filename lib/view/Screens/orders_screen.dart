@@ -65,7 +65,7 @@ class OrdersScreen extends StatelessWidget {
                             style: TextStyle(color: Colors.grey[500]),
                           ),
                           Text(
-                            "1x Barriga de Porco (R\$ 39.99)",
+                            "1x Costela de Porco (R\$ 39.99)",
                             style: TextStyle(color: Colors.grey[500]),
                           ),
                           SizedBox(

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: "Food Delivery",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Hexcolor('#D9455F')
+        primaryColor: Hexcolor('#D9455F'),
       ),
       home: HomeScreen()
     );

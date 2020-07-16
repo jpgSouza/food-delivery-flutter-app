@@ -109,7 +109,7 @@ class FavoriteScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          "R\$ 69.99",
+                          "R\$ 49.99",
                           style: TextStyle(
                               color: Theme.of(context).primaryColor,
                               fontSize: 16.0),
@@ -218,7 +218,7 @@ class FavoriteScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          "R\$ 49.99",
+                          "R\$ 39.99",
                           style: TextStyle(
                               color: Theme.of(context).primaryColor,
                               fontSize: 16.0),

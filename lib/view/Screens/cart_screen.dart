@@ -32,7 +32,7 @@ class CartScreen extends StatelessWidget {
                           height: 140.0,
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: NetworkImage(imagesListURL[0]),
+                                  image: NetworkImage(imagesListURL[1]),
                                   fit: BoxFit.fill),
                               borderRadius: BorderRadius.circular(12.0)),
                         ),
@@ -146,7 +146,7 @@ class CartScreen extends StatelessWidget {
                           height: 140.0,
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: NetworkImage(imagesListURL[1]),
+                                  image: NetworkImage(imagesListURL[0]),
                                   fit: BoxFit.fill),
                               borderRadius: BorderRadius.circular(12.0)),
                         ),
@@ -163,7 +163,7 @@ class CartScreen extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Text(
-                                    "Costela de boi",
+                                    "Costela de porco",
                                     style: TextStyle(
                                         color: Theme.of(context).primaryColor,
                                         fontWeight: FontWeight.bold,
@@ -208,7 +208,7 @@ class CartScreen extends StatelessWidget {
                                 height: 4.0,
                               ),
                               Text(
-                                "R\$ 69.99",
+                                "R\$ 39.99",
                                 style: TextStyle(
                                     color: Theme.of(context).primaryColor,
                                     fontWeight: FontWeight.bold,
@@ -345,7 +345,7 @@ class CartScreen extends StatelessWidget {
                               color: Colors.grey[500],
                             )),
                         Text(
-                          "99.98 R\$",
+                          "129.97 R\$",
                           style:
                               TextStyle(color: Theme.of(context).primaryColor),
                         )
@@ -363,7 +363,7 @@ class CartScreen extends StatelessWidget {
                               color: Colors.grey[500],
                             )),
                         Text(
-                          "-9.98 R\$",
+                          "-12.99 R\$",
                           style:
                               TextStyle(color: Theme.of(context).primaryColor),
                         )
@@ -399,7 +399,7 @@ class CartScreen extends StatelessWidget {
                                 fontSize: 16.0,
                                 fontWeight: FontWeight.bold)),
                         Text(
-                          "94.99 R\$",
+                          "121.97 R\$",
                           style: TextStyle(
                               color: Theme.of(context).primaryColor,
                               fontSize: 16.0,

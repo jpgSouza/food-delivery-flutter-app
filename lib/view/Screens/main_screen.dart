@@ -14,12 +14,7 @@ class _MainScreenState extends State<MainScreen> {
   List imagesListURL = [
     "https://images.pexels.com/photos/410648/pexels-photo-410648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/3821692/pexels-photo-3821692.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/266541/pexels-photo-266541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-  ];
-
-  //Items List Local Icons Test
-  List iconListURL = [
-    "https://img.icons8.com/ios/50/000000/year-of-ox.png",
+    "https://images.pexels.com/photos/106343/pexels-photo-106343.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   ];
 
   @override
