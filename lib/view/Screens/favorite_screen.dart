@@ -32,6 +32,7 @@ class FavoriteScreen extends StatelessWidget {
                 padding: EdgeInsets.only(
                     left: 15.0, right: 5.0, top: 10.0, bottom: 10.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Container(
                       decoration: BoxDecoration(boxShadow: [
@@ -45,19 +46,12 @@ class FavoriteScreen extends StatelessWidget {
                         backgroundImage: NetworkImage(
                           imagesListURL[1],
                         ),
-                        child: Container(),
                       ),
-                    ),
-                    SizedBox(
-                      width: 18.0,
                     ),
                     Container(
                       color: Colors.grey[500],
                       height: 80.0,
                       width: 1.0,
-                    ),
-                    SizedBox(
-                      width: 10.0,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -102,9 +96,6 @@ class FavoriteScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
@@ -141,6 +132,7 @@ class FavoriteScreen extends StatelessWidget {
                 padding: EdgeInsets.only(
                     left: 15.0, right: 5.0, top: 10.0, bottom: 10.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Container(
                       decoration: BoxDecoration(boxShadow: [
@@ -154,19 +146,12 @@ class FavoriteScreen extends StatelessWidget {
                         backgroundImage: NetworkImage(
                           imagesListURL[0],
                         ),
-                        child: Container(),
                       ),
-                    ),
-                    SizedBox(
-                      width: 18.0,
                     ),
                     Container(
                       color: Colors.grey[500],
                       height: 80.0,
                       width: 1.0,
-                    ),
-                    SizedBox(
-                      width: 10.0,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -210,9 +195,6 @@ class FavoriteScreen extends StatelessWidget {
                           ],
                         ),
                       ],
-                    ),
-                    SizedBox(
-                      width: 20.0,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,

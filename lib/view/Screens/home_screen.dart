@@ -41,10 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
               Icon(Icons.shopping_cart, color: Colors.white, size: 30.0),
               Positioned(
                 left: 12.0,
-                bottom: 14.0,
+                bottom: 12.0,
                 child: Container(
                   width: 16.0,
-                  height: 16.0,
+                  height: 18.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     color: Colors.black,
@@ -63,17 +63,15 @@ class _HomeScreenState extends State<HomeScreen> {
               duration: Duration(milliseconds: 600), curve: Curves.easeInOut);
         },
       ),
-      body: SafeArea(
-        child: PageView(
-          controller: _pageController,
-          children: <Widget>[
-            OrdersScreen(),
-            ProfileScreen(),
-            MainScreen(),
-            FavoriteScreen(),
-            CartScreen(),
-          ],
-        ),
+      body: PageView(
+        controller: _pageController,
+        children: <Widget>[
+          OrdersScreen(),
+          ProfileScreen(),
+          MainScreen(),
+          FavoriteScreen(),
+          CartScreen(),
+        ],
       ),
     );
   }

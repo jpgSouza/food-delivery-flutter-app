@@ -17,7 +17,7 @@ class CartScreen extends StatelessWidget {
         body: SafeArea(
           child: ListView(
             padding: EdgeInsets.only(
-                left: 16.0, right: 16.0, top: 40.0, bottom: 0.0),
+                left: 12.0, right: 12.0, top: 40.0, bottom: 0.0),
             children: <Widget>[
               Card(
                   shape: RoundedRectangleBorder(
@@ -37,7 +37,7 @@ class CartScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(12.0)),
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: 15.0,
                         ),
                         Flexible(
                           child: Column(
@@ -151,7 +151,7 @@ class CartScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(12.0)),
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: 15.0,
                         ),
                         Flexible(
                           child: Column(

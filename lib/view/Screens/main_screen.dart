@@ -61,7 +61,7 @@ class _MainScreenState extends State<MainScreen> {
           margin: EdgeInsets.symmetric(
             vertical: 4,
           ),
-          padding: EdgeInsets.all(15.0),
+          padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 15.0, bottom: 5.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -90,7 +90,7 @@ class _MainScreenState extends State<MainScreen> {
                         top: 10.0, bottom: 10.0),
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Carne de Boi",style: TextStyle(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold),),
+                      child: Text("Boi",style: TextStyle(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold, fontSize: 13.0),),
                     ),
                   )
                 ],
@@ -122,7 +122,7 @@ class _MainScreenState extends State<MainScreen> {
                         top: 10.0, bottom: 10.0),
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Carne de Frango", style: TextStyle(color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold),),
+                      child: Text("Frango", style: TextStyle(color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold,fontSize: 13.0),),
                     ),
                   )
                 ],
@@ -154,7 +154,7 @@ class _MainScreenState extends State<MainScreen> {
                         top: 10.0, bottom: 10.0),
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Carne de Porco",style: TextStyle(color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold),),
+                      child: Text("Porco",style: TextStyle(color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold, fontSize: 13.0),),
                     ),
                   )
                 ],
@@ -186,7 +186,7 @@ class _MainScreenState extends State<MainScreen> {
                         top: 10.0, bottom: 10.0,),
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Geleia",style: TextStyle(color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold),),
+                      child: Text("Geleias",style: TextStyle(color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold,fontSize: 13.0),),
                     ),
                   )
                 ],

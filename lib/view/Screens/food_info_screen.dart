@@ -11,7 +11,6 @@ class FoodInfoScreen extends StatelessWidget {
       "https://images.pexels.com/photos/3821692/pexels-photo-3821692.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "https://images.pexels.com/photos/266541/pexels-photo-266541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     ];
-
     return Scaffold(
         backgroundColor: Colors.white,
         body: Stack(

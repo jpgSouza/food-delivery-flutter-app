@@ -8,7 +8,7 @@ class OrdersScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SafeArea(
             child: Container(
-          padding: EdgeInsets.only(left: 12.0, right: 12.0, top: 32.0),
+          padding: EdgeInsets.only(left: 6.0, right: 6.0, top: 32.0),
           child: Column(
             children: <Widget>[
               Card(
@@ -158,31 +158,36 @@ class OrdersScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 10.0,),
                           Container(
-                            padding: EdgeInsets.only(left: 6.0, right: 6.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                _buildStatusCircle("1", "Realizado","(20:00)", 3, 2, context),
-                                Container(
-                                  height: 1.0,
-                                  width: 30.0,
-                                  color: Colors.grey[500],
-                                ),
-                                _buildStatusCircle("2","Visualizado","(20:05)", 3, 2, context),
-                                Container(
-                                  height: 1.0,
-                                  width: 30.0,
-                                  color: Colors.grey[500],
-                                ),
-                                _buildStatusCircle("3","     Saiu     ","(--:--)", 3, 3, context),
-                                Container(
-                                  height: 1.0,
-                                  width: 30.0,
-                                  color: Colors.grey[500],
-                                ),
-                                _buildStatusCircle("4","Entregue","(--:--)", 3, 4, context),
-                              ],
-                            ),
+                            padding: EdgeInsets.only(left: 1.0, right: 1.0),
+                            child: Flexible(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  _buildStatusCircle("1", "Realizado","(20:00)", 3, 2, context),
+                                  Container(
+                                    height: 1.0,
+                                    width: 30.0,
+                                    margin: EdgeInsets.only(bottom: 28.0),
+                                    color: Colors.grey[500],
+                                  ),
+                                  _buildStatusCircle("2","Visualizado","(20:05)", 3, 2, context),
+                                  Container(
+                                    height: 1.0,
+                                    width: 30.0,
+                                    margin: EdgeInsets.only(bottom: 28.0, right: 16.0),
+                                    color: Colors.grey[500],
+                                  ),
+                                  _buildStatusCircle("3","Saiu","(--:--)", 3, 3, context),
+                                  Container(
+                                    height: 1.0,
+                                    width: 30.0,
+                                    margin: EdgeInsets.only(bottom: 28.0, left: 16.0),
+                                    color: Colors.grey[500],
+                                  ),
+                                  _buildStatusCircle("4","Entregue","(--:--)", 3, 4, context),
+                                ],
+                              ),
+                            )
                           ),
                         ],
                       ),
@@ -231,12 +236,12 @@ class OrdersScreen extends StatelessWidget {
     return Column(
       children: <Widget>[
         CircleAvatar(
-          radius: 20.0,
+          radius: 18.0,
           backgroundColor: _backgroundColor,
           child: _child,
         ),
-        Text(subTitle, style: TextStyle(color: Colors.grey[500]),),
-        Text(orderDateTime, style: TextStyle(color: Colors.grey[500]),)
+        Text(subTitle, style: TextStyle(color: Colors.grey[850], fontSize: 13.0),),
+        Text(orderDateTime, style: TextStyle(color: Colors.grey[850], fontSize: 13.0),)
       ],
     );
   }
