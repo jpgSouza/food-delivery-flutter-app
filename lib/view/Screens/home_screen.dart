@@ -2,6 +2,7 @@ import 'package:delivery_app/view/Screens/cart_screen.dart';
 import 'package:delivery_app/view/Screens/favorite_screen.dart';
 import 'package:delivery_app/view/Screens/main_screen.dart';
 import 'package:delivery_app/view/Screens/orders_screen.dart';
+import 'package:delivery_app/view/Screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
@@ -12,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
   PageController _pageController = PageController();
   GlobalKey _bottomNavigationKey = GlobalKey();
   int _currentPage = 2;
@@ -66,9 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
           controller: _pageController,
           children: <Widget>[
             OrdersScreen(),
-            Container(
-              color: Colors.green,
-            ),
+            ProfileScreen(),
             MainScreen(),
             FavoriteScreen(),
             CartScreen(),
