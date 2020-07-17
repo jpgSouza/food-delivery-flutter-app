@@ -1,5 +1,5 @@
 # Food Delivery App
-Aplicação desenvolvida com intuito de aplicar/desenvolver os conceitos aprendidos em Flutter 
+Aplicação em desenvolvimento com intuito de aplicar/desenvolver os conceitos aprendidos em Flutter 
 
 ## Descrição
 Buscando preencher a escassez de aplicativos que listem fornecedores de comida pronta de qualidade, a aplicação tem como finalidade replicar as principais funcionalidades de um delivery app focado no campo de churrasco e carnes especiais. Por meio de uma interface intuitiva, simples e que vai lhe deixar com água na boca, encontre os melhores produtos para sua próxima refeição!
