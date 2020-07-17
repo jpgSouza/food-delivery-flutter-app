@@ -172,7 +172,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     )),
                 Positioned(
-                    top: 645.0,
+                    top: 640.0,
                     left: 35.0,
                     right: 35.0,
                     child: Container(
