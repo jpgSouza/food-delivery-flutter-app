@@ -41,14 +41,20 @@ class RegisterScreen extends StatelessWidget {
                   Positioned(
                     top: 10.0,
                     left: 10.0,
-                    child: IconButton(
-                      icon: Icon(Icons.keyboard_arrow_left),
-                      color: Theme.of(context).primaryColor,
-                      iconSize: 50.0,
-                      onPressed: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginScreen(),));
-                      },
-                    ),
+                    child: Row(
+                      children: <Widget>[
+                        IconButton(
+                          icon: Icon(Icons.keyboard_arrow_left),
+                          color: Theme.of(context).primaryColor,
+                          iconSize: 50.0,
+                          padding: EdgeInsets.zero,
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginScreen(),));
+                          },
+                        ),
+                        Text("VOLTAR", style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 16.0),)
+                      ],
+                    )
                   ),
                   Positioned(
                     top: 195.0,

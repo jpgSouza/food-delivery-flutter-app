@@ -21,6 +21,38 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static const Color transparent = Color(0x00000000);
 
+  final MainScreen _mainScreen = new MainScreen();
+  final ProfileScreen _profileScreen = new ProfileScreen();
+  final FavoriteScreen _favoriteScreen = new FavoriteScreen();
+  final OrdersScreen _ordersScreen = new OrdersScreen();
+  final CartScreen _cartScreen = new CartScreen();
+
+  Widget _screens = new MainScreen();
+
+  Widget _transition(int index){
+    switch (index){
+      case 0:
+        return _ordersScreen;
+        break;
+
+      case 1:
+        return _profileScreen;
+        break;
+
+      case 2:
+        return _mainScreen;
+        break;
+
+      case 3:
+        return _favoriteScreen;
+        break;
+
+      case 4:
+        return _cartScreen;
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +62,8 @@ class _HomeScreenState extends State<HomeScreen> {
         index: _currentPage,
         backgroundColor: transparent,
         color: Theme.of(context).primaryColor,
+        animationCurve: Curves.easeInOut,
+        animationDuration: Duration(milliseconds: 450),
         height: 65.0,
         items: <Widget>[
           Icon(Icons.playlist_add_check, color: Colors.white, size: 30.0),
@@ -55,24 +89,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           )
         ],
-        onTap: (pageIndex) {
+        onTap: (int pageIndex) {
           setState(() {
-            _currentPage = pageIndex;
+            _screens = _transition(pageIndex);
           });
-          _pageController.animateToPage(_currentPage,
-              duration: Duration(milliseconds: 600), curve: Curves.easeInOut);
-        },
+        }
       ),
-      body: PageView(
-        controller: _pageController,
-        children: <Widget>[
-          OrdersScreen(),
-          ProfileScreen(),
-          MainScreen(),
-          FavoriteScreen(),
-          CartScreen(),
-        ],
-      ),
+      body: _screens,
     );
   }
 }

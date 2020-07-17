@@ -1,3 +1,4 @@
+import 'package:delivery_app/view/Screens/home_screen.dart';
 import 'package:delivery_app/view/Screens/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -15,7 +16,7 @@ class LoginScreen extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 Positioned(
-                  top: 125.0,
+                  top: 110.0,
                   left: 150.0,
                   child: Container(
                     height: 200.0,
@@ -47,13 +48,12 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: 320.0,
+                  top: 305.0,
                   left: 25.0,
                   right: 25.0,
                   child: Container(
                     alignment: Alignment.center,
                     width: 369.0,
-                    height: 228.0,
                     padding: EdgeInsets.all(12.0),
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -143,10 +143,12 @@ class LoginScreen extends StatelessWidget {
                     left: 45.0,
                     right: 45.0,
                     child: Container(
-                      height: 60.0,
+                      height: 55.0,
                       alignment: Alignment.center,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen()));
+                        },
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(40.0)),
                         padding: EdgeInsets.all(0.0),
@@ -200,7 +202,7 @@ class LoginScreen extends StatelessWidget {
                     left: 45.0,
                     right: 45.0,
                     child: Container(
-                      height: 60.0,
+                      height: 55.0,
                       alignment: Alignment.center,
                       child: Container(
                         constraints:

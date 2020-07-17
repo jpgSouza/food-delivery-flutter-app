@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Hexcolor('#D9455F'),
         fontFamily: 'Montserrat'
       ),
-      home: HomeScreen()
+      home: LoginScreen()
     );
   }
 }
