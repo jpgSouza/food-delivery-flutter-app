@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
                   child: Container(
                     height: 200.0,
                     child: Image(
-                      image: AssetImage("lib/view/images/background/login.png"),
+                      image: AssetImage("lib/assets/images/background/login.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     child: Image(
                       image: AssetImage(
-                          "lib/view/images/background/custom-shape-2.png"),
+                          "lib/assets/images/background/custom-shape-2.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     child: Image(
                       image: AssetImage(
-                          "lib/view/images/background/custom-shape-1.png"),
+                          "lib/assets/images/background/custom-shape-1.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -218,7 +218,7 @@ class LoginScreen extends StatelessWidget {
                                   children: <Widget>[
                                     Image(
                                       image: AssetImage(
-                                          'lib/view/images/icons/facebook-icon.png'),
+                                          'lib/assets/images/icons/facebook-icon.png'),
                                       color: Colors.white,
                                       height: 30.0,
                                     ),

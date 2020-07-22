@@ -14,7 +14,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
-  PageController _pageController = PageController();
   GlobalKey _bottomNavigationKey = GlobalKey();
   int _currentPage = 2;
   int _cartAmount = 2;

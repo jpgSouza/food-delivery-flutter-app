@@ -37,7 +37,7 @@ class FoodInfoScreen extends StatelessWidget {
                 width: 320.0,
                 height: 250.0,
                 child: Image(
-                  image: AssetImage('lib/view/images/background/barbecue.png'),
+                  image: AssetImage('lib/assets/images/background/barbecue.png'),
                   height: 280.0,
                 ),
               ),

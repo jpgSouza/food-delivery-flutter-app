@@ -23,7 +23,7 @@ class RegisterScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                       child: Image(
                         image: AssetImage(
-                            "lib/view/images/background/custom-shape-2.png"),
+                            "lib/assets/images/background/custom-shape-2.png"),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -33,7 +33,7 @@ class RegisterScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                       child: Image(
                         image: AssetImage(
-                            "lib/view/images/background/custom-shape-1.png"),
+                            "lib/assets/images/background/custom-shape-1.png"),
                         fit: BoxFit.fill,
                       ),
                     ),

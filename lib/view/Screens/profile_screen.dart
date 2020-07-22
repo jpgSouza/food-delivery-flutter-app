@@ -17,7 +17,7 @@ class ProfileScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   child: Image(
                     image: AssetImage(
-                        "lib/view/images/background/custom-shape-3.png"),
+                        "lib/assets/images/background/custom-shape-3.png"),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -27,7 +27,7 @@ class ProfileScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   child: Image(
                     image: AssetImage(
-                        "lib/view/images/background/custom-shape-4.png"),
+                        "lib/assets/images/background/custom-shape-4.png"),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -48,7 +48,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   child: CircleAvatar(
                     radius: 60.0,
-                    backgroundImage: AssetImage("lib/view/images/background/male-avatar.png"),
+                    backgroundImage: AssetImage("lib/assets/images/background/male-avatar.png"),
                   ),
                 ),
               ),
