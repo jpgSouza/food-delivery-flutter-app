@@ -1,8 +1,18 @@
+import 'package:delivery_app/controller/BloC/create_user_bloc.dart';
 import 'package:delivery_app/view/Screens/login_screen.dart';
+import 'package:delivery_app/view/Widgets/create_input_fields.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
+  @override
+  _RegisterScreenState createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+
+  final _registerBloc = CreateUserBloc();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,119 +101,82 @@ class RegisterScreen extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Expanded(
-                                    child: TextFormField(
-                                        keyboardType: TextInputType.text,
-                                        decoration: InputDecoration(
-                                          prefixIcon: Icon(
-                                            Icons.person,
-                                            color:
-                                                Theme.of(context).primaryColor,
-                                          ),
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: Theme.of(context)
-                                                    .primaryColor),
-                                          ),
-                                          border: OutlineInputBorder(),
-                                          hintText: "Nome",
-                                          hintStyle: TextStyle(
-                                              color: Colors.grey[500]),
-                                        )),
+                                    child: CreateInputField(
+                                      prefixIcon: Icon(
+                                        Icons.person,
+                                        color: Theme.of(context).primaryColor,
+                                      ),
+                                      hint: "Nome",
+                                      obscure: false,
+                                      textInputType: TextInputType.text,
+                                      stream: _registerBloc.outName,
+                                      onChanged: _registerBloc.changeName,
+                                    )
                                   ),
                                   SizedBox(
                                     width: 10.0,
                                   ),
                                   Expanded(
-                                    child: TextFormField(
-                                        keyboardType: TextInputType.text,
-                                        decoration: InputDecoration(
-                                          focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: Theme.of(context)
-                                                    .primaryColor),
-                                          ),
-                                          border: OutlineInputBorder(),
-                                          hintText: "Sobrenome",
-                                          hintStyle: TextStyle(
-                                              color: Colors.grey[500]),
-                                        )),
+                                    child: CreateInputField(
+                                      prefixIcon: null,
+                                      hint: "Sobrenome",
+                                      obscure: false,
+                                      textInputType: TextInputType.text,
+                                      stream: _registerBloc.outLastName,
+                                      onChanged: _registerBloc.changeLastName,
+                                    )
                                   )
                                 ],
                               ),
-                              TextFormField(
-                                  keyboardType: TextInputType.text,
-                                  decoration: InputDecoration(
-                                    prefixIcon: Icon(
-                                      Icons.email,
-                                      color: Theme.of(context).primaryColor,
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color:
-                                              Theme.of(context).primaryColor),
-                                    ),
-                                    border: OutlineInputBorder(),
-                                    hintText: "E-mail",
-                                    hintStyle:
-                                        TextStyle(color: Colors.grey[500]),
-                                  )),
-                              TextFormField(
-                                  keyboardType: TextInputType.text,
-                                  decoration: InputDecoration(
-                                    prefixIcon: Icon(
-                                      Icons.email,
-                                      color: Theme.of(context).primaryColor,
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color:
-                                              Theme.of(context).primaryColor),
-                                    ),
-                                    border: OutlineInputBorder(),
-                                    hintText: "Confirmar e-mail",
-                                    hintStyle:
-                                        TextStyle(color: Colors.grey[500]),
-                                  )),
-                              TextFormField(
-                                  keyboardType: TextInputType.number,
-                                  decoration: InputDecoration(
-                                    prefixIcon: Icon(
-                                      Icons.phone,
-                                      color: Theme.of(context).primaryColor,
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color:
-                                              Theme.of(context).primaryColor),
-                                    ),
-                                    border: OutlineInputBorder(),
-                                    hintText: "Telefone",
-                                    hintStyle:
-                                        TextStyle(color: Colors.grey[500]),
-                                  )),
-                              TextFormField(
-                                  keyboardType: TextInputType.text,
-                                  obscureText: true,
-                                  decoration: InputDecoration(
-                                    prefixIcon: Icon(
-                                      Icons.vpn_key,
-                                      color: Theme.of(context).primaryColor,
-                                    ),
-                                    suffixIcon: IconButton(
-                                      icon: Icon(Icons.remove_red_eye),
-                                      color: Theme.of(context).primaryColor,
-                                      onPressed: () {},
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color:
-                                              Theme.of(context).primaryColor),
-                                    ),
-                                    border: OutlineInputBorder(),
-                                    hintText: "Senha",
-                                    hintStyle:
-                                        TextStyle(color: Colors.grey[500]),
-                                  )),
+                              CreateInputField(
+                                prefixIcon: Icon(
+                                  Icons.email,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                                hint: "E-mail",
+                                obscure: false,
+                                textInputType: TextInputType.text,
+                                stream: _registerBloc.outEmail,
+                                onChanged: _registerBloc.changeEmail,
+                              ),
+                              CreateInputField(
+                                prefixIcon: Icon(
+                                  Icons.email,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                                hint: "Confirmar e-mail",
+                                obscure: false,
+                                textInputType: TextInputType.text,
+                                stream: _registerBloc.outConfirmEmail,
+                                onChanged: _registerBloc.changeConfirmEmail,
+                              ),
+                              CreateInputField(
+                                prefixIcon: Icon(
+                                  Icons.phone,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                                hint: "Telefone",
+                                obscure: false,
+                                textInputType: TextInputType.phone,
+                                stream: _registerBloc.outPhone,
+                                onChanged: _registerBloc.changePhone,
+                              ),
+                              CreateInputField(
+                                prefixIcon: Icon(
+                                  Icons.vpn_key,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                                suffixIconButton: IconButton(
+                                  icon: Icon(Icons.remove_red_eye),
+                                  color: Theme.of(context).primaryColor,
+                                  onPressed: (){},
+                                ),
+                                hint: "Senha",
+                                obscure: true,
+                                textInputType: TextInputType.text,
+                                stream: _registerBloc.outPassword,
+                                onChanged: _registerBloc.changePassword,
+                              ),
                             ],
                           ),
                         )),

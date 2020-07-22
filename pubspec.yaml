@@ -32,6 +32,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   hexcolor: ^1.0.2
   curved_navigation_bar: ^0.3.3
+  bloc_pattern: ^2.3.2
+  rxdart: ^0.24.1
 
 dev_dependencies:
   flutter_test:
