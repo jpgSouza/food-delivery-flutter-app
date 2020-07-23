@@ -135,7 +135,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 ),
                                 hint: "E-mail",
                                 obscure: false,
-                                textInputType: TextInputType.text,
+                                textInputType: TextInputType.emailAddress,
                                 stream: _registerBloc.outEmail,
                                 onChanged: _registerBloc.changeEmail,
                               ),
@@ -146,7 +146,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 ),
                                 hint: "Confirmar e-mail",
                                 obscure: false,
-                                textInputType: TextInputType.text,
+                                textInputType: TextInputType.emailAddress,
                                 stream: _registerBloc.outConfirmEmail,
                                 onChanged: _registerBloc.changeConfirmEmail,
                               ),
@@ -189,7 +189,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         height: 60.0,
                         alignment: Alignment.center,
                         child: RaisedButton(
-                          onPressed: () {},
+                          onPressed: _registerBloc.createUser,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(40.0)),
                           padding: EdgeInsets.all(0.0),

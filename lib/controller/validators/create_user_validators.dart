@@ -17,7 +17,7 @@ class CreateUserValidator{
 
   final validateConfirmEmail = StreamTransformer<String, String>.fromHandlers(
       handleData: (confirmEmail, sink,){
-        if(confirmEmail == _email){
+        if(confirmEmail == _email && _email.isNotEmpty){
           sink.add(confirmEmail);
         } else {
           sink.addError("E-mail diferente");

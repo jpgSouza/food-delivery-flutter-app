@@ -1,8 +1,16 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:delivery_app/controller/API/database/firebase_database.dart';
 import 'package:delivery_app/controller/validators/create_user_validators.dart';
+import 'package:delivery_app/model/entities/user_model.dart';
 import 'package:rxdart/rxdart.dart';
 
+enum CreateState {IDLE, LOADING, SUCCESS, FAIL}
+
 class CreateUserBloc extends BlocBase with CreateUserValidator{
+
+  User user;
+  Firebase firebase;
+  Map<String, dynamic> userData;
 
   //Controllers
   final _nameController = BehaviorSubject<String>();
@@ -11,6 +19,8 @@ class CreateUserBloc extends BlocBase with CreateUserValidator{
   final _confirmEmailController = BehaviorSubject<String>();
   final _phoneNumberController = BehaviorSubject<String>();
   final _passwordController = BehaviorSubject<String>();
+  final _stateController = BehaviorSubject<CreateState>();
+
 
   //Streams
   Stream<String> get outName => _nameController.stream;
@@ -19,10 +29,7 @@ class CreateUserBloc extends BlocBase with CreateUserValidator{
   Stream<String> get outConfirmEmail => _confirmEmailController.stream.transform(validateConfirmEmail);
   Stream<String> get outPhone => _phoneNumberController.stream.transform(validatePhone);
   Stream<String> get outPassword => _passwordController.stream.transform(validatePassword);
-
-  CreateUserBloc(){
-
-  }
+  Stream<CreateState> get outState => _stateController.stream;
 
   Function(String) get changeName => _nameController.sink.add;
   Function(String) get changeLastName => _lastNameController.sink.add;
@@ -30,6 +37,11 @@ class CreateUserBloc extends BlocBase with CreateUserValidator{
   Function(String) get changeConfirmEmail => _confirmEmailController.sink.add;
   Function(String) get changePhone => _phoneNumberController.sink.add;
   Function(String) get changePassword => _passwordController.sink.add;
+
+  CreateUserBloc(){
+    user = User();
+    firebase = Firebase();
+  }
 
   @override
   void dispose() {
@@ -39,5 +51,33 @@ class CreateUserBloc extends BlocBase with CreateUserValidator{
     _confirmEmailController.close();
     _phoneNumberController.close();
     _passwordController.close();
+    _stateController.close();
   }
+
+  void createUser() async{
+
+    user.name = _nameController.value;
+    user.lastName = _lastNameController.value;
+    user.email = _emailController.value;
+    user.confirmEmail = _confirmEmailController.value;
+    user.phoneNumber = _phoneNumberController.value;
+    user.password = _passwordController.value;
+
+    userData = user.toMap();
+
+    _stateController.add(CreateState.LOADING);
+
+    firebase.firebaseAuth.createUserWithEmailAndPassword(email: user.email, password: user.password).then((currentUser) async{
+      firebase.firebaseUser = currentUser;
+      await _saveData(userData);
+    }).catchError((err){
+      _stateController.add(CreateState.FAIL);
+    });
+
+  }
+
+  Future<Null> _saveData(Map<String, dynamic> userData) async{
+    await firebase.firestore.collection("users").document(firebase.firebaseUser.uid).setData(userData);
+  }
+
 }
