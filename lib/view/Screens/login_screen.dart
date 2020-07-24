@@ -155,9 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 55.0,
                       alignment: Alignment.center,
                       child: RaisedButton(
-                        onPressed: () {
-                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen()));
-                        },
+                        onPressed: _login.submit,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(40.0)),
                         padding: EdgeInsets.all(0.0),
