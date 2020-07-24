@@ -1,6 +1,6 @@
 import 'dart:async';
 
-class CreateUserValidator{
+class UserInputValidator{
 
   static String _email;
 

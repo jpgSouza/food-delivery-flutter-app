@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:delivery_app/controller/BloC/login_bloc.dart';
 import 'package:delivery_app/view/Screens/home_screen.dart';
 import 'package:delivery_app/view/Screens/register_screen.dart';
+import 'package:delivery_app/view/Widgets/login_input_fields.dart';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 class LoginScreen extends StatefulWidget {
 
@@ -11,6 +12,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+  final _login = LoginBloc();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,18 +94,18 @@ class _LoginScreenState extends State<LoginScreen> {
                                       color: Theme.of(context).primaryColor,
                                       fontSize: 22.0),
                                 ),
-                                TextFormField(
-                                  style: TextStyle(color: Colors.black),
-                                  keyboardType: TextInputType.emailAddress,
-                                  decoration: InputDecoration(
-                                      border: InputBorder.none,
-                                      prefixIcon: Icon(Icons.email,
-                                          color:
-                                              Theme.of(context).primaryColor),
-                                      hintText: "E-mail",
-                                      hintStyle:
-                                          TextStyle(color: Colors.grey[400])),
-                                ),
+                                LoginInputField(
+                                  prefixIcon: Icon(
+                                    Icons.person,
+                                    color: Theme.of(context).primaryColor,
+                                  ),
+                                  suffixIcon: null,
+                                  hint: "E-mail",
+                                  textInputType: TextInputType.emailAddress,
+                                  obscure: false,
+                                  stream: _login.outEmail,
+                                  onChanged: _login.changeEmail,
+                                )
                               ],
                             )),
                         Container(
@@ -110,23 +114,21 @@ class _LoginScreenState extends State<LoginScreen> {
                                 border: Border(
                                     bottom:
                                         BorderSide(color: Colors.grey[100]))),
-                            child: TextFormField(
-                              obscureText: true,
-                              style: TextStyle(color: Colors.black),
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                prefixIcon: Icon(Icons.vpn_key,
-                                    color: Theme.of(context).primaryColor),
-                                hintText: "Password",
-                                hintStyle: TextStyle(color: Colors.grey[400]),
-                                suffixIcon: IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(
-                                    Icons.visibility_off,
-                                    color: Theme.of(context).primaryColor,
-                                  ),
-                                ),
+                            child: LoginInputField(
+                              prefixIcon: Icon(
+                                Icons.vpn_key,
+                                color: Theme.of(context).primaryColor,
                               ),
+                              suffixIcon: IconButton(
+                                onPressed: (){},
+                                icon: Icon(Icons.remove_red_eye),
+                                color: Theme.of(context).primaryColor,
+                              ),
+                              hint: "Password",
+                              textInputType: TextInputType.text,
+                              obscure: true,
+                              stream: _login.outPassword,
+                              onChanged: _login.changePassword,
                             )),
                         Align(
                           alignment: Alignment.centerRight,

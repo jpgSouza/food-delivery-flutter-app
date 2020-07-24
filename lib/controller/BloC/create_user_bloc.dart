@@ -1,12 +1,12 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:delivery_app/controller/API/database/firebase_database.dart';
-import 'package:delivery_app/controller/validators/create_user_validators.dart';
+import 'package:delivery_app/controller/validators/user_input_validators.dart';
 import 'package:delivery_app/model/entities/user_model.dart';
 import 'package:rxdart/rxdart.dart';
 
 enum CreateState {IDLE, LOADING, SUCCESS, FAIL}
 
-class CreateUserBloc extends BlocBase with CreateUserValidator{
+class CreateUserBloc extends BlocBase with UserInputValidator{
 
   User user;
   Firebase firebase;
@@ -20,7 +20,6 @@ class CreateUserBloc extends BlocBase with CreateUserValidator{
   final _phoneNumberController = BehaviorSubject<String>();
   final _passwordController = BehaviorSubject<String>();
   final _stateController = BehaviorSubject<CreateState>();
-
 
   //Streams
   Stream<String> get outName => _nameController.stream;
