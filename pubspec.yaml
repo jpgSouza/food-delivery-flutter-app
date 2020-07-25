@@ -34,6 +34,7 @@ dependencies:
   bloc_pattern: ^2.3.2
   rxdart: ^0.24.1
   mask_text_input_formatter: ^1.0.7
+  flutter_facebook_login: ^3.0.0
 
 dev_dependencies:
   flutter_test:
