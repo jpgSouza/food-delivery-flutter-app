@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class CreateInputField extends StatelessWidget {
   final Icon prefixIcon;
@@ -8,6 +9,7 @@ class CreateInputField extends StatelessWidget {
   final TextInputType textInputType;
   final Stream<String> stream;
   final Function(String) onChanged;
+  final MaskTextInputFormatter maskTextInputFormatter;
 
   CreateInputField(
       {this.prefixIcon,
@@ -16,7 +18,8 @@ class CreateInputField extends StatelessWidget {
       this.textInputType,
       this.suffixIconButton,
       this.stream,
-      this.onChanged});
+      this.onChanged,
+      this.maskTextInputFormatter});
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +29,7 @@ class CreateInputField extends StatelessWidget {
           return TextFormField(
               onChanged: onChanged,
               keyboardType: textInputType,
+              inputFormatters: maskTextInputFormatter == null ? null : [maskTextInputFormatter],
               obscureText: obscure,
               decoration: InputDecoration(
                   prefixIcon: prefixIcon,

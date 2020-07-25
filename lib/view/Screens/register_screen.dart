@@ -3,6 +3,7 @@ import 'package:delivery_app/view/Screens/login_screen.dart';
 import 'package:delivery_app/view/Widgets/create_input_fields.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override
@@ -10,8 +11,11 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+
   final _registerBloc = CreateUserBloc();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final _phoneMaskFormatter = MaskTextInputFormatter(mask: "(##) # ####-####");
 
   @override
   void initState() {
@@ -213,6 +217,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                                 Theme.of(context).primaryColor,
                                           ),
                                           hint: "Telefone",
+                                          maskTextInputFormatter: _phoneMaskFormatter,
                                           obscure: false,
                                           textInputType: TextInputType.phone,
                                           stream: _registerBloc.outPhone,

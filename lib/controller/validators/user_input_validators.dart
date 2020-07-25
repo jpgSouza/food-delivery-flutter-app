@@ -27,7 +27,7 @@ class UserInputValidator{
 
   final validatePhone = StreamTransformer<String, String>.fromHandlers(
       handleData: (phone, sink,) {
-        if(phone.length == 11){
+        if(phone.length == 16){
           sink.add(phone);
         }else{
           sink.addError("Telefone inválido");
