@@ -1,5 +1,6 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:delivery_app/controller/API/database/firebase_database.dart';
+import 'package:delivery_app/controller/BloC/login_bloc.dart';
 import 'package:delivery_app/controller/validators/user_input_validators.dart';
 import 'package:delivery_app/model/entities/user_model.dart';
 import 'package:rxdart/rxdart.dart';
@@ -40,6 +41,7 @@ class CreateUserBloc extends BlocBase with UserInputValidator{
   CreateUserBloc(){
     user = User();
     firebase = Firebase();
+    _stateController.add(CreateState.IDLE);
   }
 
   @override
@@ -77,6 +79,7 @@ class CreateUserBloc extends BlocBase with UserInputValidator{
 
   Future<Null> _saveData(Map<String, dynamic> userData) async{
     await firebase.firestore.collection("users").document(firebase.firebaseUser.uid).setData(userData);
+    _stateController.add(CreateState.SUCCESS);
   }
 
 }

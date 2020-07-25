@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:delivery_app/controller/API/database/firebase_database.dart';
 import 'package:delivery_app/controller/validators/user_input_validators.dart';
@@ -16,24 +18,22 @@ class LoginBloc extends BlocBase with UserInputValidator {
   final _stateController = BehaviorSubject<LoginState>();
 
   //Streams
-  Stream<String> get outEmail =>
-      _emailController.stream.transform(validateEmail);
-
-  Stream<String> get outPassword =>
-      _passwordController.stream.transform(validatePassword);
-
+  Stream<String> get outEmail => _emailController.stream.transform(validateEmail);
+  Stream<String> get outPassword => _passwordController.stream.transform(validatePassword);
   Stream<LoginState> get outState => _stateController.stream;
 
-  Function(String) get changeEmail => _emailController.sink.add;
+  StreamSubscription _streamSubscription;
 
+  Function(String) get changeEmail => _emailController.sink.add;
   Function(String) get changePassword => _passwordController.sink.add;
 
   LoginBloc() {
     user = User();
     firebase = Firebase();
-    firebase.firebaseAuth.onAuthStateChanged.listen((userAuth) {
+    _streamSubscription = firebase.firebaseAuth.onAuthStateChanged.listen((userAuth) {
       if (userAuth != null) {
-        firebase.firebaseAuth.signOut();
+        firebase.firebaseAuth.signOut(); //alterar essa linha quando logout for implementado
+        _stateController.add(LoginState.SUCCESS);
       } else {
         _stateController.add(LoginState.IDLE);
       }
@@ -58,5 +58,7 @@ class LoginBloc extends BlocBase with UserInputValidator {
     _emailController.close();
     _passwordController.close();
     _stateController.close();
+
+    _streamSubscription.cancel();
   }
 }
