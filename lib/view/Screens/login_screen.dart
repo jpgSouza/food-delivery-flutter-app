@@ -1,3 +1,4 @@
+import 'package:delivery_app/controller/API/facebook/facebook_login.dart';
 import 'package:delivery_app/controller/BloC/login_bloc.dart';
 import 'package:delivery_app/view/Screens/home_screen.dart';
 import 'package:delivery_app/view/Screens/register_screen.dart';
@@ -13,6 +14,8 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final _loginBloc = LoginBloc();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final _authWithFacebook = FacebookLoginAuth();
 
   @override
   void initState() {
@@ -293,7 +296,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       borderSide: BorderSide(
                                           color: Colors.white, width: 2),
                                       shape: StadiumBorder(),
-                                      onPressed: () {}),
+                                      onPressed: _authWithFacebook.logIn),
                                 ),
                               )),
                           Positioned(

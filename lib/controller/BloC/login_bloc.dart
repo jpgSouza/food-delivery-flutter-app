@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
-import 'package:delivery_app/controller/API/database/firebase_database.dart';
+import 'package:delivery_app/controller/API/database/firebase.dart';
 import 'package:delivery_app/controller/validators/user_input_validators.dart';
 import 'package:delivery_app/model/entities/user_model.dart';
 import 'package:rxdart/rxdart.dart';
